@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 client.on('ready', () => {
-  client.user.setGame(`for help type | %help  .`,'https://www.youtube.com/kinggamer_th3');
+  client.user.setGame(`for help type | -help  .`,'https://www.youtube.com/kinggamer_th3');
   console.log('---------------');
   console.log('Bot Is Online')
   console.log('---------------')
@@ -102,7 +102,7 @@ client.on('message', message => {
 
                     client.on('message', message => {
                                 if(!message.channel.guild) return;
-                        if (message.content.startsWith('%ping')) {
+                        if (message.content.startsWith('-ping')) {
                             if(!message.channel.guild) return;
                             var msg = `${Date.now() - message.createdTimestamp}`
                             var api = `${Math.round(client.ping)}`
